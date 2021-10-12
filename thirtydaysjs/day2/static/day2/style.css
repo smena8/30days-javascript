@@ -1,0 +1,65 @@
+:root {
+    /* day variables */
+    --background-clr: #adcbea; /* light blue */
+    --slider-clr: #FFF57B; /* sun yellow */
+    --slider-background: radial-gradient(#a3bded 0%, #6991c7 80%); /* sky blue */
+    --slider-pos: translateX(0px);
+    --txt-clr: #222d5a;
+}
+
+*, *:before, *:after {
+	box-sizing: border-box;
+	margin:0;
+	padding:0;
+	transition: all 1000ms ease-in;
+}
+
+body {
+    background-color: var(--background-clr) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.darkmode {
+    --background-clr: #222d5a; /* night blue */
+    --slider-clr: #E2E2E0; /* moon white */
+    --slider-background: radial-gradient(#334489 0%, #222d5a 80%); /* night blue */
+    --slider-pos: translateX(45px);
+    --txt-clr: white;
+}
+
+h1 {
+    font-size: 1.25rem;
+    color: var(--txt-clr);
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+label {
+    background: var(--slider-background) ;
+    border-radius: 100px;
+    box-shadow: inset 1px 3px 5px;
+    display: block;
+    position: relative;
+    height: 50px;
+    width: 100px;
+    margin: 0 2em;
+}
+
+#slider {
+    background-color: var(--slider-clr);
+    border-radius: 50%;
+    display: block;
+    filter: drop-shadow(1px 1px 5px white);
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    height: 40px;
+    width: 40px;
+    transform: var(--slider-pos);
+}

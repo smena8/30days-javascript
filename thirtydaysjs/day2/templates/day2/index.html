@@ -1,0 +1,17 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Day 2 - Toggle Dark Mode</title>
+    <link rel="stylesheet" href="{% static 'day2\style.css' %}" media="all">
+</head>
+<body>
+    <h1>Light Mode</h1>
+    <input id="toggle_day_night" type="checkbox" aria-label="Toggle for Day and Night Mode" title="Toggle for Day and Night Mode">
+    <label for="toggle_day_night"><span id="slider"></span></label>
+    <h1>Dark Mode</h1>
+    <script src="{% static 'day2\script.js' %}"></script>
+</body>
+</html>

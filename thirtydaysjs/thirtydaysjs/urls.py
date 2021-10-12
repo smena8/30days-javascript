@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('gallery.urls'), name='Gallery'),
     path('1/', include('day1.urls'), name='Day1'),
+    path('2/', include('day2.urls'), name='Day2'),
 ]

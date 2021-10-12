@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{% static 'gallery/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'gallery/style.css' %}" media="all">
 </head>
 <body>
 <section id="projects" class="projects__container">
@@ -19,7 +19,7 @@
                         <div class="project">
                             <a class="project__img__link" href="{% url 'Day1:Index' %}" target="_blank" rel="noreferrer">
                                 Pop It Fidget Toy (Neumorphic Style)
-                                <div class="project__img" role="img" height="100%" width="100%" style="background-image: url('{% static 'gallery/popit.png' %}');" aria-label="Pop It Fidget Toy (Neumorphic Style)"></div>
+                                <div class="project__img" role="img" height="100%" width="100%" style="background-image: url('{% static 'gallery\images\popit.png' %}');" aria-label="Pop It Fidget Toy (Neumorphic Style)"></div>
                             </a>
                                 <a class="project__link" href="{% url 'Day1:Index' %}" target="_blank" rel="noreferrer">
                                 <h2 class="project__hdr">Pop It Fidget Toy</h2>
@@ -33,7 +33,29 @@
                                     A digital version of the popular fidget toy.<br>
                                     Contains string interpolation, Math, EventListener, and array methods.
                                     <br>
-                                    <a class="project__link" href="https://github.com/smena8/WatchURLanguage" target="_blank" rel="noreferrer">Github
+                                    <a class="project__link" href="https://github.com/smena8/30days-javascript/tree/main/thirtydaysjs/day1" target="_blank" rel="noreferrer">Github
+                                    </a>
+                                </p>
+                            </div>
+                    </div>
+                        <div class="project">
+                            <a class="project__img__link" href="{% url 'Day2:Index' %}" target="_blank" rel="noreferrer">
+                                Dark Mode Toggle
+                                <div class="project__img" role="img" height="100%" width="100%" style="background-image: url('{% static 'gallery\images\darkmodetoggle.png' %}');" aria-label="Dark Mode Toggle"></div>
+                            </a>
+                                <a class="project__link" href="{% url 'Day2:Index' %}" target="_blank" rel="noreferrer">
+                                <h2 class="project__hdr">Dark Mode Toggle</h2>
+                                <span class="project__link__background"></span>
+                            </a>
+
+                            <div class="project__desc">
+                                <input id="info_toggle" type="checkbox">
+                                <label for="info_toggle" class="btn tools__accordion" tabindex="0" role="button" aria-pressed="false" aria-expanded="false">Info<span></span></label>
+                                <p class="project__desc--summary">
+                                    Toggle switch between light and dark mode.<br>
+                                    Localstorage keeps track of user's preferences.
+                                    <br>
+                                    <a class="project__link" href="https://github.com/smena8/30days-javascript/tree/main/thirtydaysjs/day2" target="_blank" rel="noreferrer">Github
                                     </a>
                                 </p>
                             </div>
