@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Full Stack Developer portfolio.">
+    <title>30 Days of Javascript Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'gallery/style.css' %}">
+</head>
+<body>
+<section id="projects" class="projects__container">
+        <h1 class="section-header">01 Gallery</h1>
+        <div class="projects__container--inner">
+                    <div class="projects__gallery">
+                        <div class="project">
+                            <a class="project__img__link" href="{% url 'Day1:Index' %}" target="_blank" rel="noreferrer">
+                                Pop It Fidget Toy (Neumorphic Style)
+                                <div class="project__img" role="img" height="100%" width="100%" style="background-image: url('{% static 'gallery/popit.png' %}');" aria-label="Pop It Fidget Toy (Neumorphic Style)"></div>
+                            </a>
+                                <a class="project__link" href="{% url 'Day1:Index' %}" target="_blank" rel="noreferrer">
+                                <h2 class="project__hdr">Pop It Fidget Toy</h2>
+                                <span class="project__link__background"></span>
+                            </a>
+
+                            <div class="project__desc">
+                                <input id="info_watch" type="checkbox">
+                                <label for="info_watch" class="btn tools__accordion" tabindex="0" role="button" aria-pressed="false" aria-expanded="false">Info<span></span></label>
+                                <p class="project__desc--summary">
+                                    A digital version of the popular fidget toy.<br>
+                                    Contains string interpolation, Math, EventListener, and array methods.
+                                    <br>
+                                    <a class="project__link" href="https://github.com/smena8/WatchURLanguage" target="_blank" rel="noreferrer">Github
+                                    </a>
+                                </p>
+                            </div>
+                    </div>
+                    </div>
+        </div>
+    </section>

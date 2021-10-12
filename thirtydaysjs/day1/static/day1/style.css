@@ -1,0 +1,139 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+	margin:0;
+	padding:0;
+}
+
+body {
+    background-color: #ffe4e9;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 1em;
+}
+
+.popits {
+    padding: 1em;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.border {
+    background: #b10000;
+	height: 100%;
+	width: 100px;
+	padding: 1em;
+}
+
+.circle {
+	background: #b10000;
+	border-radius: 50%;
+	cursor: pointer;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	box-shadow: -5px -5px 20px #e90505, 5px 5px 12px rgb(120, 0, 0),
+	            inset 0px 0px 0px transparent, inset 0px 0px 0px rgb(0, 0, 0, 0);
+    transition: box-shadow 500ms;
+}
+
+
+.circle:hover, .popped {
+    box-shadow: 0px 0px 0px transparent, 0px 0px 0px rgb(0, 0, 0, 0),
+                inset -5px -5px 20px #b40303, inset 5px 5px 12px rgb(101, 2, 2);
+}
+
+.row:first-child {
+    margin-top: 2em;
+}
+
+.row:first-child > .border:first-child {
+	border-top-left-radius: 32px;
+}
+
+.row:first-child > .border:last-child {
+	border-top-right-radius: 32px;
+}
+
+.row:last-child > .border:first-child {
+	border-bottom-left-radius: 32px;
+}
+
+.row:last-child > .border:last-child {
+	border-bottom-right-radius: 32px;
+}
+
+
+.row.orange > .border, .row.orange > .border > .circle {
+	background: #FF6200;
+}
+
+.row.orange > .border > .circle {
+    box-shadow: -5px -5px 20px #FF9535, 5px 5px 12px #8C3D0C,
+	            inset 0px 0px 0px transparent, inset 0px 0px 0px rgb(0, 0, 0, 0);
+
+}
+
+.row.orange > .border > .circle:hover,
+.row.orange > .border > .circle.popped {
+    box-shadow: 0px 0px 0px transparent, 0px 0px 0px rgb(0, 0, 0, 0),
+	            inset -5px -5px 20px #E16B00, inset 5px 5px 12px #8C3D0C;
+
+}
+
+.row.yellow > .border, .row.yellow > .border > .circle {
+	background: #ffd700;
+}
+
+.row.yellow > .border > .circle {
+	box-shadow: -5px -5px 20px #FEECDB, 5px 5px 12px #8C3D0C, inset 0px 0px 0px transparent, inset 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+.row.yellow > .border > .circle:hover, .row.yellow > .border > .circle.popped {
+	box-shadow: 0px 0px 0px transparent, 0px 0px 0px rgba(0, 0, 0, 0), inset -5px -5px 20px #FAD624, inset 5px 5px 12px #b86e00;
+}
+
+.row.green > .border, .row.green > .border > .circle {
+	background: #009813;
+}
+
+.row.green > .border > .circle {
+	box-shadow: -5px -5px 20px #63d471, 5px 5px 12px #233329, inset 0px 0px 0px transparent, inset 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+.row.green > .border > .circle:hover, .row.green > .border > .circle.popped {
+	box-shadow: 0px 0px 0px transparent, 0px 0px 0px rgba(0, 0, 0, 0), inset -5px -5px 20px #14b428, inset 5px 5px 12px #233329;
+}
+
+.row.blue > .border, .row.blue > .border > .circle {
+	background: #0094a1;
+}
+
+.row.blue > .border > .circle {
+	box-shadow: -5px -5px 20px #02c6d8, 5px 5px 12px #236ca0, inset 0px 0px 0px transparent, inset 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+.row.blue > .border > .circle:hover, .row.blue > .border > .circle.popped {
+	box-shadow: 0px 0px 0px transparent, 0px 0px 0px rgba(0, 0, 0, 0), inset -5px -5px 20px #02bfd0, inset 5px 5px 12px #004474;
+}
+
+.row.purple > .border, .row.purple > .border > .circle {
+	background: #9768c5;
+}
+
+.row.purple > .border > .circle {
+	box-shadow: -5px -5px 20px #c89fff, 5px 5px 12px #3e07bc, inset 0px 0px 0px transparent, inset 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+.row.purple > .border > .circle:hover, .row.purple > .border > .circle.popped {
+	box-shadow: 0px 0px 0px transparent, 0px 0px 0px rgba(0, 0, 0, 0), inset -5px -5px 20px #b27ff2, inset 5px 5px 12px #3a0d90;
+}

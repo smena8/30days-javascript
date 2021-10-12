@@ -1,0 +1,17 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Day 1 - Pop Its (Neumorphic)</title>
+    <link rel="stylesheet" href="{% static 'day1\style.css' %}">
+</head>
+<body>
+    <h1>Press the buttons with the mouse, or navigate with tab and press with the Enter key.</h1>
+    <audio src="{% static 'day1\audio.mp3' %}" id="audio"></audio>
+    <div class="popits">
+    </div>
+    <script src="{% static 'day1\script.js' %}"></script>
+</body>
+</html>
