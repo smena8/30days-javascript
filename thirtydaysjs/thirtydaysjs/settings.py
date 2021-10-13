@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'gallery',
     'day1',
     'day2',
+    'day3',
 ]
 
 MIDDLEWARE = [
