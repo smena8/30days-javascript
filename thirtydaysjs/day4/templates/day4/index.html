@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="{% static 'day4/style.css' %}" media="all">
+</head>
+<body>
+<div class="calculator">
+  <div class="calculator__display">
+      <p class="previous-operand"></p>
+      <p class="current-operand">0</p>
+  </div>
+  <div class="calculator__keys">
+      <div>
+          <button type="submit" data-number="7">7</button>
+          <button type="submit" data-number="8">8</button>
+          <button type="submit" data-number="9">9</button>
+          <button type="submit" data-number="4">4</button>
+          <button type="submit" data-number="5">5</button>
+          <button type="submit" data-number="6">6</button>
+          <button type="submit" data-number="1">1</button>
+          <button type="submit" data-number="2">2</button>
+          <button type="submit" data-number="3">3</button>
+          <button type="submit" data-number="0">0</button>
+          <button type="submit" data-action="decimal">.</button>
+          <button type="submit" class="key--equal" data-action="calculate">=</button>
+      </div>
+      <div>
+          <button type="submit" data-action="clear">AC</button>
+          <button type="submit" class="key--operator" data-action="add">&plus;</button>
+          <button type="submit" class="key--operator" data-action="subtract">&minus;</button>
+          <button type="submit" class="key--operator" data-action="multiply">&times;</button>
+          <button type="submit" class="key--operator" data-action="divide">&divide;</button>
+      </div>
+
+  </div>
+</div>
+<script src="{% static 'day4/script.js' %}"></script>
+</body>
+</html>

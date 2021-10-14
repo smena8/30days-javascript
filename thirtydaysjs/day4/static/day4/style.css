@@ -1,0 +1,175 @@
+:root {
+    --main: #D3D3F2;
+}
+
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	background-color: #5C5C83;
+	min-height: 100vh;
+}
+
+.calculator {
+    background-color: var(--main);
+    border: 10px solid white;
+    border-radius: 5px;
+    box-shadow: 10px 10px 0px black;
+    display: grid;
+	grid-template-areas:
+	    "disp disp disp disp"
+	    "disp disp disp disp"
+	    "keys keys keys keys"
+	    "keys keys keys keys"
+	    "keys keys keys keys"
+	    "keys keys keys keys"
+	    "keys keys keys keys"
+	    "keys keys keys keys";
+    margin: auto;
+    position: relative;
+    height: 30em;
+    width: 18em;
+}
+
+.calculator::before {
+	content: '';
+	border: 5px solid grey;
+	border-radius: 5px;
+	display: inline-block;
+	position: absolute;
+	height: 30em;
+	width: 18em;
+	top: -15px;
+	left: -15px;
+	z-index: 1;
+}
+
+.calculator__display {
+	display: flex;
+	justify-content: end;
+	flex-direction: column;
+	align-items: end;
+	align-content: end;
+	background: white;
+	border-radius: 5px;
+	font-size: 1.25rem;
+	height: 100px;
+	margin: 10px 10px 0 10px;
+	padding: .25em .5em .25em .5em;
+	grid-area: disp;
+}
+
+.previous-operand {
+    font-size: 1.25rem;
+    margin: .10em 0;
+}
+
+.current-operand {
+    font-size: 1.75rem;
+    margin: .25em 0;
+}
+
+.calculator__keys {
+	grid-area: keys;
+	display: grid;
+	grid-template-areas:
+	". . . o"
+	"n n n o"
+	"n n n o"
+	"n n n o"
+	"n n n o";
+	margin: 15px;
+}
+
+.calculator__keys > div:nth-child(1) {
+    grid-area: n;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.calculator__keys > div:nth-child(2) {
+    grid-area: o;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    margin-left: 10px;
+}
+
+button {
+    outline: none;
+    background-color: #DCDCF3;
+    border: 2px solid white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 0px black;
+    cursor: pointer;
+    font-size: 1.75rem;
+    display: grid;
+    align-items: center;
+	grid-template-areas:
+	    "disp disp disp disp"
+	    "disp disp disp disp"
+	    "keys keys keys keys"
+	    "keys keys keys keys"
+	    "keys keys keys keys"
+	    "keys keys keys keys"
+	    "keys keys keys keys"
+	    "keys keys keys keys";
+    position: relative;
+    height: 60px;
+    width: 60px;
+    padding: .25rem .75rem;
+}
+
+
+
+button::before {
+	content: '';
+	border: 3px solid grey;
+	border-radius: 5px;
+	display: inline-block;
+	position: absolute;
+	height: 60px;
+	width: 60px;
+	top: -5px;
+	left: -5px;
+	z-index: 1;
+}
+
+button:focus, button:focus-within, button:active {
+    animation-name: keypress;
+    animation-duration: 750ms;
+}
+
+.calculator__keys > div:nth-child(2) > button {
+    background-color: #B1B1E5;
+}
+
+.calculator__keys > div:nth-child(2) > button[data-action="clear"] {
+    background-color: #EDCE93;
+    padding: .25rem;
+}
+
+.calculator__keys > div:nth-child(1) > button[data-action="calculate"] {
+    background-color: #7ddbc9;
+}
+
+@keyframes keypress {
+    0% {
+        box-shadow: 2px 2px 0px black;
+    }
+    100% {
+        box-shadow: 5px 5px 0px black;
+    }
+}
+

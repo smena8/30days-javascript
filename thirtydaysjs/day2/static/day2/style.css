@@ -44,6 +44,7 @@ label {
     background: var(--slider-background) ;
     border-radius: 100px;
     box-shadow: inset 1px 3px 5px;
+    cursor: pointer;
     display: block;
     position: relative;
     height: 50px;
