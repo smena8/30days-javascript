@@ -8,32 +8,32 @@
     <link rel="stylesheet" href="{% static 'day4/style.css' %}" media="all">
 </head>
 <body>
-<div class="calculator">
+<div class="calculator" data-previous-key-type>
   <div class="calculator__display">
       <p class="previous-operand"></p>
       <p class="current-operand">0</p>
   </div>
   <div class="calculator__keys">
       <div>
-          <button type="submit" data-number="7">7</button>
-          <button type="submit" data-number="8">8</button>
-          <button type="submit" data-number="9">9</button>
-          <button type="submit" data-number="4">4</button>
-          <button type="submit" data-number="5">5</button>
-          <button type="submit" data-number="6">6</button>
-          <button type="submit" data-number="1">1</button>
-          <button type="submit" data-number="2">2</button>
-          <button type="submit" data-number="3">3</button>
-          <button type="submit" data-number="0">0</button>
-          <button type="submit" data-action="decimal">.</button>
-          <button type="submit" class="key--equal" data-action="calculate">=</button>
+          <button type="submit" data-number="7" data-type="number" data-keyboard="7" >7</button>
+          <button type="submit" data-number="8" data-type="number" data-keyboard="8" >8</button>
+          <button type="submit" data-number="9" data-type="number" data-keyboard="9" >9</button>
+          <button type="submit" data-number="4" data-type="number" data-keyboard="4" >4</button>
+          <button type="submit" data-number="5" data-type="number" data-keyboard="5" >5</button>
+          <button type="submit" data-number="6" data-type="number" data-keyboard="6" >6</button>
+          <button type="submit" data-number="1" data-type="number" data-keyboard="1" >1</button>
+          <button type="submit" data-number="2" data-type="number" data-keyboard="2" >2</button>
+          <button type="submit" data-number="3" data-type="number" data-keyboard="3" >3</button>
+          <button type="submit" data-number="0" data-type="number" data-keyboard="0" >0</button>
+          <button type="submit" data-number="decimal" data-type="number">.</button>
+          <button type="submit" data-action="calculate" data-type="calculate" data-keyboard="=" >=</button>
       </div>
       <div>
-          <button type="submit" data-action="clear">AC</button>
-          <button type="submit" class="key--operator" data-action="add">&plus;</button>
-          <button type="submit" class="key--operator" data-action="subtract">&minus;</button>
-          <button type="submit" class="key--operator" data-action="multiply">&times;</button>
-          <button type="submit" class="key--operator" data-action="divide">&divide;</button>
+          <button type="submit" data-action="clear" data-type="clear" data-keyboard="">AC</button>
+          <button type="submit" data-action="add" data-type="operator" data-keyboard="+">&plus;</button>
+          <button type="submit" data-action="subtract" data-type="operator" data-keyboard="-">&minus;</button>
+          <button type="submit" data-action="multiply" data-type="operator" data-keyboard="*">&times;</button>
+          <button type="submit" data-action="divide" data-type="operator" data-keyboard="/">&divide;</button>
       </div>
 
   </div>
