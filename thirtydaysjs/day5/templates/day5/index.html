@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Color Flipper</title>
+    <link rel="stylesheet" href="{% static 'day5/style.css' %}" media="all">
+</head>
+<body>
+<div class="swatch">
+    <div class="swatch__top"></div>
+    <div id="display" class="swatch__bottom">
+        <p id="color_hex"></p>
+        <p id="color_rgb"></p>
+        <p id="color_cmyk"></p>
+    </div>
+</div>
+<button type="button">New Color Swatch</button>
+</body>
+<script src="{% static 'day5/script.js' %}"></script>
+</html>

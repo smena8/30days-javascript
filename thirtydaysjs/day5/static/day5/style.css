@@ -1,0 +1,52 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    background: black;
+    font-family: Helvetica, Arial, sans-serif;
+    height: 100vh;
+}
+
+.swatch {
+    height: 500px;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.swatch__top {
+    border: 10px solid white;
+    height: 400px;
+    width: 100%;
+}
+
+.swatch__bottom {
+    background-color: white;
+    color: black;
+    min-height: 6em;
+    width: 100%;
+}
+
+.swatch__bottom > p {
+    padding-left: 1em;
+}
+
+button {
+    background: white;
+    color: black;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    min-height: 50px;
+    margin-top: 1em;
+    padding: 1em;
+    text-transform: uppercase;
+}
