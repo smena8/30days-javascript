@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Responsive Top Menu</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'day6/fontawesome/css/all.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'day6/style.css' %}" media="all">
+</head>
+<body style="background-image: url('{% static 'day6/images/bg_ice_scream.jpg' %}');">
+    <div class="header">
+        <div class="logo"></div>
+        <nav>
+            <button class="hamburger" type="button" title="Menu Button" aria-label="Menu Button"></button>
+            <ul>
+                <li>Home</li>
+                <li>Order</li>
+                <li>Location</li>
+                <li>About</li>
+                <li>Contact Us</li>
+                <li><span class="fa user-alt"></span>Login</li>
+                <li>Register</li>
+            </ul>
+        </nav>
+    </div>
+<main>
+    <h1>I scream,
+        <br>
+        you scream...
+    </h1>
+    <p>We all scream for ice cream!
+        <br>
+        The best since 1934.
+    </p>
+    <button>Order Now</button>
+</main>
+</body>
+<script src="{% static 'day6/script.js' %}"></script>
+</html>
