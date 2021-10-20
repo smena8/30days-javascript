@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Responsive Top Menu</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'day9/fontawesome/css/all.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'day9/style.css' %}" media="all">
+</head>
+<body>
+    <video autoplay muted loop id="video">
+      <source src="{% static 'day9/images/scooping_ice_cream.mp4' %}" type="video/mp4">
+    </video>
+    <main>
+    <h1>I scream,
+        <br>
+        you scream...
+    </h1>
+    <p>We all scream for ice cream!
+        <br>
+        The best since 1934.
+    </p>
+    <button id="order_btn" type="button">Pause</button>
+</main>
+</div>
+</body>
+<script src="{% static 'day9/script.js' %}"></script>
+</html>
