@@ -149,9 +149,7 @@ body {
 
 .modal {
     display: none;
-    position: absolute;
-	top: 30%;
-	left: 15%;
+    margin: auto;
 }
 
 .modal__container {
