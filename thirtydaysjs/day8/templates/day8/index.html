@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Responsive Top Menu</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'day8/fontawesome/css/all.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'day8/style.css' %}" media="all">
+</head>
+<body style="background-image: url('{% static 'day8/images/bg_ice_scream.jpg' %}');">
+    <div class="header">
+        <div class="logo"></div>
+        <nav>
+            <button class="hamburger" type="button" title="Menu Button" aria-label="Menu Button"></button>
+            <ul>
+                <li>Home</li>
+                <li>Order</li>
+                <li>Location</li>
+                <li>About</li>
+                <li>Contact Us</li>
+                <li><span class="fa user-alt"></span>Login</li>
+                <li>Register</li>
+            </ul>
+        </nav>
+    </div>
+<main>
+    <h1>I scream,
+        <br>
+        you scream...
+    </h1>
+    <p>We all scream for ice cream!
+        <br>
+        The best since 1934.
+    </p>
+    <button id="order_btn" type="button">Order Now</button>
+</main>
+<!-- The Modal -->
+<div id="modal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal__container">
+    <img class="modal__image" src="" style="background-image: url({% static 'day8/images/ice_cream_scoop.jpg' %})" title="Ice Cream Scoop" width="400px" height="100%">
+    <div class="modal__details">
+        <h1 class="modal__header">Get the scoop!</h1>
+        <p class="modal__text">Sign up for emails about our latest deals and new flavors.</p>
+        <input type="text" placeholder="johnsmith@gmail.com" value="">
+        <button type="button">Subscribe</button>
+        <span class="modal__close">&times;</span>
+    </div>
+  </div>
+
+</div>
+</body>
+<script src="{% static 'day8/script.js' %}"></script>
+</html>
