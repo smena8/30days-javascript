@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Review Carousel</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'day7/style.css' %}" media="all">
+</head>
+<body>
+    <h1>Here's what our fans are saying:</h1>
+    <div class="main__container">
+        <span class="quote__left"></span>
+        <span class="quote__right"></span>
+        <div role="button" aria-label="Review Previous" title="Review Previous" class="arrow__left">
+        </div>
+        <div class="reviews__container">
+            <div class="review current">
+                <img class="review__image" src="{% static 'day7/images/customer1.jpg' %}" alt="Customer">
+                <div>
+                    <p class="review__text">
+                        Favorite ice cream place ever! On Tuesdays there is $2 ice cream.
+                        I love the classic chocolate and s'mores flavors!
+                        "One scoop" of ice cream is really <strong>3 SCOOPS</strong>! LOVE THIS PLACE!</p>
+                    <p class="review__author">Sandra Giunone</p>
+                </div>
+            </div>
+            <div class="review">
+                <img class="review__image" src="{% static 'day7/images/customer2.jpg' %}" alt="Customer">
+                <div>
+                    <p class="review__text">
+                        Best ice cream in town!
+                        Every flavor tastes exactly like the thing, it's amazing!
+                        We got two four scoop samplers so that we could try the max number of flavors. </p>
+                    <p class="review__author">Esteban Gutiérrez</p>
+                </div>
+            </div>
+            <div class="review">
+                <img class="review__image" src="{% static 'day7/images/customer3.jpg' %}" alt="Customer">
+                <div>
+                    <p class="review__text">
+                        Our friends told us this spot usually has a long line, so lucky us there was no line when we came!
+                        We ordered a sampler with strawberry, butter pecan, and salted caramel.
+                        The strawberry was our favorite! </p>
+                    <p class="review__author">Imaan Morrison</p>
+                </div>
+            </div>
+        </div>
+        <div role="button" aria-label="Review Next" title="Review Next" class="arrow__right"></div>
+    </div>
+    <div class="indicators__container">
+        <div class="indicator current"></div>
+    </div>
+<script src="{% static 'day7/script.js' %}"></script>
+</body>
+</html>
