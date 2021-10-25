@@ -1,0 +1,152 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color: #7fa866;
+	font-family: Helvetica, Arial, sans-serif;
+	width: 100%;
+	position: relative;
+}
+
+main {
+    width: 100%;
+}
+
+section:first-child {
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+}
+
+section {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    padding: 2em 1em;
+}
+
+.header {
+	display: flex;
+	justify-content: end;
+	width: 100%;
+	position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+}
+
+nav {
+    background: #ee8691;
+    display: flex;
+    font-size: 1.15rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    height: 65px;
+    min-width: 65px;
+    width: 0;
+    padding-left: 7px;
+    transition: height 500ms ease-in-out, width 750ms ease-in-out;
+}
+
+nav > * {
+    padding: 1em;
+}
+
+nav.open {
+    width: 300px;
+}
+
+.hamburger, .hamburger::after, .hamburger::before {
+	background: white;
+	cursor: pointer;
+	margin: 15px auto;
+	padding: 0;
+	height: 5px;
+	width: 50px;
+	transition: margin 750ms ease-in-out, transform 750ms ease-in-out;
+}
+
+.hamburger::after, .hamburger::before {
+	content: '';
+	display: block;
+}
+
+.hamburger::after {
+    margin: 10px 0 0 0;
+}
+
+.hamburger::before {
+    margin: 15px 0 0 0;
+}
+
+ul {
+	background: #ee8691;
+	color: white;
+	height: 250px;
+}
+
+li {
+    cursor: pointer;
+    list-style: none;
+    margin: 5px 1em;
+    white-space: nowrap;
+}
+
+h1 {
+    font-size: 5em;
+    filter: drop-shadow(5px 5px 10px #343434);
+    margin-bottom: .25em;
+}
+
+p {
+    font-size: 2em;
+    filter: drop-shadow(5px 5px 10px #343434);
+}
+
+button {
+    background: #ee8691;
+    border: none;
+    color: white;
+    font-weight: 700;
+	height: 50px;
+	width: 150px;
+	letter-spacing: 2px;
+	margin: 1em 0;
+	text-transform: uppercase;
+}
+
+
+@media screen and (min-width: 1000px) {
+
+
+    .hamburger {
+        display: none;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+    }
+
+    li {
+        margin: 0 1em;
+    }
+
+}
