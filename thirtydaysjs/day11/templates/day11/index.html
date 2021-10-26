@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Filter Menu</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'day11/style.css' %}" media="all">
+</head>
+<body>
+    <div id="filter_menu" class="filter-menu">
+        <button type="button" aria-label="Filter Ice creams" data-filter="icecream">Ice Cream</button>
+        <button type="button" aria-label="Filter Milkshakes" data-filter="milkshake">Milkshake</button>
+        <button type="button" aria-label="Filter Popsicles" data-filter="popsicle">Popsicle</button>
+        <button type="button" aria-label="View All" data-filter="all">View All</button>
+    </div>
+    <div id="gallery" class="gallery">
+        <div class="gallery__thumb" role="img" aria-label="Ice Cream" title="Ice Cream" data-tag="icecream" style="background-image: url({% static 'day11/images/icecream5.jpg' %});"></div>
+        <div class="gallery__thumb" role="img" aria-label="Milkshake" title="Milkshake" data-tag="milkshake" style="background-image: url({% static 'day11/images/milkshake1.jpg' %});"></div>
+        <div class="gallery__thumb" role="img" aria-label="Popsicle" title="Popsicle" data-tag="popsicle" style="background-image: url({% static 'day11/images/popsicle1.jpg' %});"></div>
+        <div class="gallery__thumb" role="img" aria-label="Ice Cream" title="Ice Cream" data-tag="icecream" style="background-image: url({% static 'day11/images/icecream2.jpg' %});"></div>
+        <div class="gallery__thumb" role="img" aria-label="Milkshake" title="Milkshake" data-tag="milkshake" style="background-image: url({% static 'day11/images/milkshake2.jpg' %});"></div>
+        <div class="gallery__thumb" role="img" aria-label="Popsicle" title="Popsicle" data-tag="popsicle" style="background-image: url({% static 'day11/images/popsicle2.jpg' %});"></div>
+        <div class="gallery__thumb" role="img" aria-label="Ice Cream" title="Ice Cream" data-tag="icecream" style="background-image: url({% static 'day11/images/icecream3.jpg' %});"></div>
+        <div class="gallery__thumb" role="img" aria-label="Ice Cream" title="Ice Cream" data-tag="icecream" style="background-image: url({% static 'day11/images/icecream4.jpg' %});"></div>
+        <div class="gallery__thumb" role="img" aria-label="Popsicle" title="Popsicle" data-tag="popsicle" style="background-image: url({% static 'day11/images/popsicle3.jpg' %});"></div>
+        <div class="gallery__thumb" role="img" aria-label="Popsicle" title="Popsicle" data-tag="popsicle" style="background-image: url({% static 'day11/images/popsicle4.jpg' %});"></div>
+        <div class="gallery__thumb" role="img" aria-label="Popsicle" title="Popsicle" data-tag="popsicle" style="background-image: url({% static 'day11/images/popsicle5.jpg' %});"></div>
+        <div class="gallery__thumb" role="img" aria-label="Milkshake" title="Milkshake" data-tag="milkshake" style="background-image: url({% static 'day11/images/milkshake3.jpg' %});"></div>
+        <div class="gallery__thumb" role="img" aria-label="Ice Cream" title="Ice Cream" data-tag="icecream" style="background-image: url({% static 'day11/images/icecream1.jpg' %});"></div>
+        <div class="gallery__thumb" role="img" aria-label="Milkshake" title="Milkshake" data-tag="milkshake" style="background-image: url({% static 'day11/images/milkshake4.jpg' %});"></div>
+        <div class="gallery__thumb" role="img" aria-label="Popsicle" title="Popsicle" data-tag="popsicle" style="background-image: url({% static 'day11/images/popsicle6.jpg' %});"></div>
+    </div>
+<script src="{% static 'day11/script.js' %}"></script>
+</body>
+</html>
