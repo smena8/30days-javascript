@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Pridi:wght@200;300;400&display=swap');
+
+:root {
+    --beige: #efe5cf;
+    --red: #ce3a33;
+    --blue: #108ccf;
+    --green: #47af38;
+    --yellow: #ffcd0a;
+    --gray: #8f8a82;
+}
+
+*, *:after, *:before {
+    box-size: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	background-color: var(--beige);
+	font-family: 'Pridi', serif;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+button {
+    border: 2px solid var(--beige);
+    cursor: pointer;
+    outline: none;
+}
+
+button:focus {
+    border: 2px solid var(--blue);
+}
+
+strong {
+    color: var(--blue);
+    text-decoration: underline;
+}
+
+.tasklist__container {
+    margin: 1em;
+    padding: 1em;
+    width: 375px;
+}
+
+.tasklist__header {
+    border: 2px solid var(--gray);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    text-align: center;
+}
+
+.tasklist__input {
+    border: 2px solid var(--beige);
+    margin-right: 10px;
+    padding: 15px;
+    width: 200px;
+}
+
+.tasklist__input:focus, .tasklist__input:focus-visible {
+    border-color: var(--blue);
+    outline: 0;
+}
+
+.tasklist__add, .tasklist__delete {
+    background: transparent;
+    color: var(--gray);
+    font-size: 1.25rem;
+}
+
+.tasklist__add {
+    border: 2px solid var(--gray);
+    padding: 10px;
+}
+
+.tasklist__item {
+    border: 2px solid var(--gray);
+    border-top: 1px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: .5em;
+}
+
+.tasklist__item:last-child {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.tasklist__item > * {
+    margin: 1em;
+}
+
+.tasklist__status, .tasklist__priority {
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+}
+
+.tasklist__status {
+    appearance: none;
+    border: 2px solid var(--gray);
+    position: relative;
+}
+
+.tasklist__status:checked::after {
+	content: '\2714';
+	font-size: 1rem;
+	position: absolute;
+	top: -1px;
+	left: 3px;
+	color: var(--gray);
+}
+
+.tasklist__title {
+    width: 7em;
+}
+
+.tasklist__priority {
+    background: var(--green);
+}

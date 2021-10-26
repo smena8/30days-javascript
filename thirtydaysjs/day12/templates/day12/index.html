@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Task List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" text="text/css" href="{% static 'day12/style.css' %}" />
+</head>
+<body>
+<div class="info">
+    <h1>Keep up the good work.<br>
+        You have <strong id="tasklist__length" class="tasklist__length">0</strong><strong> tasks</strong> left.
+    </h1>
+</div>
+<div class="tasklist__container">
+    <div class="tasklist__header">
+        <input type="text" id="input_task" class="tasklist__input" name="task" placeholder="Add task..." value="">
+        <button type="submit" id="add_task" class="tasklist__add" aria-label="Add Task to List" title="Add Task to List">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+        </button>
+    </div>
+    <div id="tasklist__list">
+    </div>
+
+</div>
+<script src="{% static 'day12/script.js' %}"></script>
+</body>
+</html>

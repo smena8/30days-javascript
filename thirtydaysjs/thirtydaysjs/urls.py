@@ -31,4 +31,5 @@ urlpatterns = [
     path('9/', include('day9.urls'), name='Day9'),
     path('10/', include('day10.urls'), name='Day10'),
     path('11/', include('day11.urls'), name='Day11'),
+    path('12/', include('day12.urls'), name='Day12'),
 ]
