@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" text="text/css" href="{% static 'day13/style.css' %}" media="all">
+</head>
+<body>
+<h1>Can You Beat The Computer?</h1>
+<h2>Select an option.</h2>
+<div class="options">
+    <div class="option">
+        <img src="{% static 'day13/images/Rock.png' %}" alt="Rock">
+        <button type="button">Rock</button>
+    </div>
+    <div class="option">
+        <img src="{% static 'day13/images/Paper.png' %}" alt="Paper">
+        <button type="button">Paper</button>
+    </div>
+    <div class="option">
+        <img src="{% static 'day13/images/Scissors.png' %}" alt="Scissors">
+        <button type="button">Scissors</button>
+    </div>
+</div>
+<p id="comp"></p>
+<p id="results"></p>
+<a class="vecteezy-link" href="https://www.vecteezy.com/free-vector/rock-paper-scissors">Rock Paper Scissors Vectors by Vecteezy</a>
+</body>
+<script text="text/javascript" src="{% static 'day13/script.js' %}"></script>
+</html>
