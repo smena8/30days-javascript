@@ -1,0 +1,56 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body {
+    background-color: #96D294;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body > * {
+    margin: 1em 0;
+}
+
+.moles__all {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 40px;
+}
+
+.mole__container {
+    position: relative;
+    margin: 1em;
+    height: 100px;
+    width: 100px;
+}
+
+.mole__dirt {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: brown;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    height: 30px;
+    width: 100%;
+}
+
+.mole {
+    position: absolute;
+    top: 0;
+    left: 20px;
+	background-size: cover;
+    background-position: center;
+	border-top-left-radius: 50px;
+	border-top-right-radius: 50px;
+	cursor: pointer;
+	margin: 0 auto;
+	height: 100px;
+	width: 65px;
+}

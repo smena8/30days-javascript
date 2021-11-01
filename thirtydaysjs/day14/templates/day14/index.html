@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Whac-A-Mole</title>
+    <link rel="stylesheet" href="{% static 'day14/style.css' %}">
+</head>
+<body>
+<h1>Click the moles to score points!</h1>
+<p>Time Left: <strong id="time-left">60</strong></p>
+<p>Score: <strong id="score">0</strong></p>
+<div class="moles__all">
+     <div class="mole__container">
+        <div id="0"  style="background: url({% static 'day14/images/mole.png' %})  repeat 0 0;;"></div>
+        <div class="mole__dirt"></div>
+    </div>
+    <div class="mole__container">
+        <div id="1" style="background-image: url({% static 'day14/images/mole.png' %});"></div>
+        <div class="mole__dirt"></div>
+    </div>
+    <div class="mole__container">
+        <div id="2" style="background-image: url({% static 'day14/images/mole.png' %});"></div>
+        <div class="mole__dirt"></div>
+    </div>
+    <div class="mole__container">
+        <div id="3" class="" style="background-image: url({% static 'day14/images/mole.png' %});"></div>
+        <div class="mole__dirt"></div>
+    </div>
+    <div class="mole__container">
+        <div id="4" class="" style="background-image: url({% static 'day14/images/mole.png' %});"></div>
+        <div class="mole__dirt"></div>
+    </div>
+    <div class="mole__container">
+        <div id="5" class="" style="background-image: url({% static 'day14/images/mole.png' %});"></div>
+        <div class="mole__dirt"></div>
+    </div>
+</div>
+<script src="{% static 'day14/script.js' %}"></script>
+</body>
+</html>
