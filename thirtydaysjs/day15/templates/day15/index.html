@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="{% static 'day15/style.css' %}" media="all">
+</head>
+<body>
+<h1>Click on a square to begin the game!</h1>
+<div class="board cross">
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+</div>
+<button id="restart" class="restart">RESTART</button>
+<script src="{% static 'day15/script.js' %}"></script>
+</body>
+</html>

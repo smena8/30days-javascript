@@ -1,0 +1,143 @@
+:root {
+	--beige: #efe5cf;
+	--red: #ce3a33;
+	--blue: #108ccf;
+	--green: #47af38;
+	--yellow: #ffcd0a;
+	--gray: #8f8a82;
+}
+
+*, *:after, *:before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--beige);
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+h1 {
+    margin: 1em;
+}
+
+.board {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    height: 600px;
+    width: 600px;
+}
+
+.square {
+	border: 2px solid black;
+	cursor: pointer;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.square:nth-child(1),
+.square:nth-child(2),
+.square:nth-child(3) {
+    border-top: none;
+}
+
+.square:nth-child(4),
+.square:nth-child(5),
+.square:nth-child(6) {
+    border-top: none;
+    border-bottom: none;
+}
+
+.square:nth-child(7),
+.square:nth-child(8),
+.square:nth-child(9) {
+    border-bottom: none;
+}
+
+.square:nth-child(1),
+.square:nth-child(4),
+.square:nth-child(7) {
+    border-left: none;
+    border-right: none;
+}
+
+.square:nth-child(3),
+.square:nth-child(6),
+.square:nth-child(9) {
+    border-left: none;
+    border-right: none;
+}
+
+.square.cross {
+   cursor: not-allowed;
+}
+
+.square.circle {
+    cursor: not-allowed;
+}
+
+.square.cross:after, .square.cross:before,
+.board.cross > .square:not(.cross):not(.circle):hover:after,
+.board.cross > .square:not(.cross):not(.circle):hover:before {
+    content: '';
+    background: var(--green);
+    display: block;
+    position: absolute;
+    height: 170px;
+    width: 15px;
+}
+
+.square.cross:after,
+.board.cross > .square:not(.cross):not(.circle):hover:after {
+    transform: rotate(45deg);
+}
+
+.square.cross:before,
+.board.cross > .square:not(.cross):not(.circle):hover:before {
+    transform: rotate(-45deg);
+}
+
+.board.cross > .square:not(.cross):not(.circle):hover:after,
+.board.cross > .square:not(.cross):not(.circle):hover:before {
+    background: var(--gray);
+}
+
+.square.circle:after, .square.circle:before,
+.board.circle > .square:not(.cross):not(.circle):hover:after,
+.board.circle > .square:not(.cross):not(.circle):hover:before {
+    content: '';
+    background: var(--blue);
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    height: 150px;
+    width: 150px;
+}
+
+.square.circle:after,
+.board.circle > .square:not(.cross):not(.circle):hover:after {
+    background: var(--beige);
+    height: 130px;
+    width: 130px;
+}
+
+.board.circle > .square:not(.cross):not(.circle):hover:before {
+    background: var(--gray);
+}
+
+.restart {
+    background: var(--blue);
+    color: white;
+    cursor: pointer;
+    border: none;
+    margin: 2em;
+    height: 50px;
+    width: 150px;
+}
