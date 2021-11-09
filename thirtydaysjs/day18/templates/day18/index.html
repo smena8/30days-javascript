@@ -7,7 +7,38 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="{% static '' %}{{ app_name }}/style.css" media="all">
 </head>
-<body>
+<body style="background-image: url('{% static 'day18/images/person_with_icecream__green.jpg' %}');">
+    <div class="header">
+        <div class="logo"></div>
+        <nav>
+            <button class="hamburger" type="button" title="Menu Button" aria-label="Menu Button"></button>
+            <ul>
+                <li>Home</li>
+                <li>Order</li>
+                <li>Location</li>
+                <li>About</li>
+                <li>Contact Us</li>
+                <li><span class="fa user-alt"></span>Login</li>
+                <li>Register</li>
+            </ul>
+        </nav>
+    </div>
+<main>
+    <h1>I scream,
+        <br>
+        you scream...
+    </h1>
+    <p>We all scream for ice cream!
+        <br>
+        The best since 1934.
+    </p>
+    <button>Order Now</button>
+    <span class="arrow-left"></span>
+    <span class="arrow-right"></span>
+    <div class="indicators__container">
+        <div class="indicator current"></div>
+    </div>
+</main>
 <script src="{% static '' %}{{ app_name }}/script.js"></script>
 </body>
 </html>
