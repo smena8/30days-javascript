@@ -4,4 +4,4 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'day16/index.html', {'app_name': 'day21'})
+    return render(request, 'day21/index.html', {'app_name': 'day21'})

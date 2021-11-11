@@ -8,6 +8,40 @@
     <link rel="stylesheet" type="text/css" href="{% static '' %}{{ app_name }}/style.css" media="all">
 </head>
 <body>
+    <div>
+        <h2 class="contact__hdr">Get in touch.</h2>
+        <form id="contact-form" class="contact-form" action="" method="get">
+            <label for="id_message_name">Name:
+                <div class="error-text__container">
+                    <p class="error-text"></p>
+                    <span></span>
+                </div>
+            </label>
+            <input type="text" name="message_name" placeholder="John Smith" maxlength="50" id="id_message_name">
+            <label for="id_message_email">E-mail:
+                <div class="error-text__container">
+                    <p class="error-text"></p>
+                    <span></span>
+                </div>
+            </label>
+            <input type="text" name="message_email" placeholder="sample@gmail.com" maxlength="150" id="id_message_email">
+            <label for="id_message_subject">Subject:
+                <div class="error-text__container">
+                    <p class="error-text"></p>
+                    <span></span>
+                </div>
+            </label>
+            <input type="text" name="message_subject" placeholder="Subject" maxlength="50" id="id_message_subject">
+            <label for="id_message_text">Message:
+                <div class="error-text__container">
+                    <p class="error-text"></p>
+                    <span></span>
+                </div>
+            </label>
+            <textarea name="message_text" cols="40" rows="10" placeholder="Write message here..." maxlength="2000" id="id_message_text"></textarea>
+            <button id="submitButton" type="submit"><span id="submitButtonText">Submit</span></button>
+        </form>
+    </div>
 <script src="{% static '' %}{{ app_name }}/script.js"></script>
 </body>
 </html>
