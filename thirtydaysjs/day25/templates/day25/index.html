@@ -4,10 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>Weather Application</title>
+    <link rel="stylesheet" href="{% static '' %}{{ app_name }}/fontawesome/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="{% static '' %}{{ app_name }}/style.css" media="all">
 </head>
 <body>
+<section>
+    <div>
+        <h1 id="location" class="location">Los Angeles. California</h1>
+    </div>
+    <div class="today__container">
+        <div class="today__main">
+            <div class="today-icon"><i class="far fa-sun"></i></div>
+            <div>
+                <p id="today-desc" class="today-desc">Rain</p>
+            </div>
+        </div>
+        <div class="today__detail"><p id="today-detailed">Heavy Rain All Day</p></div>
+    </div>
+    <div class="today__extras">
+        <div>
+            <i class="fas fa-wind"></i>
+            <p id="wind-desc"><span id="wind-direction">SE</span> at <span id="wind-speed">15KM/H</span></p>
+        </div>
+        <div>
+            <i class="fas fa-temperature-low"></i>
+            <p><span id="current-temp">2</span> &#176;F</p>
+        </div>
+
+    </div>
+    <div class="forecast__container">
+        <div class="forecast__detail">
+            <div><p id="time">Now</p></div>
+            <div class="forecast-icon"><img class="weather-img" src=""></div>
+            <p><span id="temp-now">2</span> &#176;F</p>
+        </div>
+    </div>
+</section>
 <script src="{% static '' %}{{ app_name }}/script.js"></script>
 </body>
 </html>
