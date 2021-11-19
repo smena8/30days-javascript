@@ -4,10 +4,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="{% static '' %}day25/fontawesome/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="{% static '' %}{{ app_name }}/style.css" media="all">
 </head>
 <body>
+<div class="menu__container">
+    <div id="filter_menu" class="filter-menu">
+        <button type="button" aria-label="Filter Ice creams" data-filter="icecream">Ice Cream</button>
+        <button type="button" aria-label="Filter Milkshakes" data-filter="milkshake">Milkshake</button>
+        <button type="button" aria-label="Filter Popsicles" data-filter="popsicle">Popsicle</button>
+        <button type="button" aria-label="View All" data-filter="all">View All</button>
+    </div>
+    <div id="gallery" class="gallery">
+        <div class="gallery__thumb--container">
+            <div class="gallery__thumb" role="img" aria-label="Ice Cream" title="Ice Cream" data-tag="icecream" style="background-image: url({% static 'day27/images/icecream5.jpg' %});"></div>
+            <p class="gallery__thumb--title">Ice Cream with Nonpareils Cone</p>
+            <p class="gallery__thumb--price-details">$<span class="price">4.99</span></p>
+            <button class="btn-add-cart">Add To Cart</button>
+        </div>
+        <div class="gallery__thumb--container">
+            <div class="gallery__thumb" role="img" aria-label="Milkshake" title="Milkshake" data-tag="milkshake" style="background-image: url({% static 'day27/images/milkshake1.jpg' %});"></div>
+            <p class="gallery__thumb--title">Twix Milkshake</p>
+            <p class="gallery__thumb--price-details">$<span class="price">9.99</span></p>
+            <button class="btn-add-cart">Add To Cart</button>
+        </div>
+        <div class="gallery__thumb--container">
+            <div class="gallery__thumb" role="img" aria-label="Popsicle" title="Popsicle" data-tag="popsicle" style="background-image: url({% static 'day27/images/popsicle1.jpg' %});"></div>
+            <p class="gallery__thumb--title">Fresh Blueberry Popsicle</p>
+            <p class="gallery__thumb--price-details">$<span class="price">3.99</span></p>
+            <button class="btn-add-cart">Add To Cart</button>
+        </div>
+        <div class="gallery__thumb--container">
+            <div class="gallery__thumb" role="img" aria-label="Ice Cream" title="Ice Cream" data-tag="icecream" style="background-image: url({% static 'day27/images/icecream2.jpg' %});"></div>
+            <p class="gallery__thumb--title">Ice Cream with Waffle Cone</p>
+            <p class="gallery__thumb--price-details">$<span class="price">4.99</span></p>
+            <button class="btn-add-cart">Add To Cart</button>
+        </div>
+        <div class="gallery__thumb--container">
+            <div class="gallery__thumb" role="img" aria-label="Milkshake" title="Milkshake" data-tag="milkshake" style="background-image: url({% static 'day27/images/milkshake2.jpg' %});"></div>
+            <p class="gallery__thumb--title">Rocher Hazelnut and Gingerbread Milkshake</p>
+            <p class="gallery__thumb--price-details">$<span class="price">9.99</span></p>
+            <button class="btn-add-cart">Add To Cart</button>
+        </div>
+        <div class="gallery__thumb--container">
+            <div class="gallery__thumb" role="img" aria-label="Popsicle" title="Popsicle" data-tag="popsicle" style="background-image: url({% static 'day27/images/popsicle2.jpg' %});"></div>
+            <p class="gallery__thumb--title">Real Raspberry Popsicle</p>
+            <p class="gallery__thumb--price-details">$<span class="price">3.99</span></p>
+            <button class="btn-add-cart">Add To Cart</button>
+        </div>
+        <div class="gallery__thumb--container">
+            <div class="gallery__thumb" role="img" aria-label="Ice Cream" title="Ice Cream" data-tag="icecream" style="background-image: url({% static 'day27/images/icecream3.jpg' %});"></div>
+            <p class="gallery__thumb--title">Ice Cream Cone with Fixins</p>
+            <p class="gallery__thumb--price-details">$<span class="price">4.99</span></p>
+            <button class="btn-add-cart">Add To Cart</button>
+        </div>
+        <div class="gallery__thumb--container">
+            <div class="gallery__thumb" role="img" aria-label="Ice Cream" title="Ice Cream" data-tag="icecream" style="background-image: url({% static 'day27/images/icecream4.jpg' %});"></div>
+            <p class="gallery__thumb--title">Ice Cream with Bubble Waffle Cone</p>
+            <p class="gallery__thumb--price-details">$<span class="price">8.99</span></p>
+            <button class="btn-add-cart">Add To Cart</button>
+        </div>
+        <div class="gallery__thumb--container">
+            <div class="gallery__thumb" role="img" aria-label="Popsicle" title="Popsicle" data-tag="popsicle" style="background-image: url({% static 'day27/images/popsicle3.jpg' %});"></div>
+            <p class="gallery__thumb--title">Organic Apricot Popsicle</p>
+            <p class="gallery__thumb--price-details">$<span class="price">3.99</span></p>
+            <button class="btn-add-cart">Add To Cart</button>
+        </div>
+        <div class="gallery__thumb--container">
+            <div class="gallery__thumb" role="img" aria-label="Popsicle" title="Popsicle" data-tag="popsicle" style="background-image: url({% static 'day27/images/popsicle4.jpg' %});"></div>
+            <p class="gallery__thumb--title">Cherry Creamsicle</p>
+            <p class="gallery__thumb--price-details">$<span class="price">3.99</span></p>
+            <button class="btn-add-cart">Add To Cart</button>
+        </div>
+        <div class="gallery__thumb--container">
+            <div class="gallery__thumb" role="img" aria-label="Popsicle" title="Popsicle" data-tag="popsicle" style="background-image: url({% static 'day27/images/popsicle5.jpg' %});"></div>
+            <p class="gallery__thumb--title">Strawberry Creamsicle</p>
+            <p class="gallery__thumb--price-details">$<span class="price">3.99</span></p>
+            <button class="btn-add-cart">Add To Cart</button>
+        </div>
+        <div class="gallery__thumb--container">
+            <div class="gallery__thumb" role="img" aria-label="Milkshake" title="Milkshake" data-tag="milkshake" style="background-image: url({% static 'day27/images/milkshake3.jpg' %});"></div>
+            <p class="gallery__thumb--title">Oreo Fudge Milkshake</p>
+            <p class="gallery__thumb--price-details">$<span class="price">8.99</span></p>
+            <button class="btn-add-cart">Add To Cart</button>
+        </div>
+        <div class="gallery__thumb--container">
+            <div class="gallery__thumb" role="img" aria-label="Ice Cream" title="Ice Cream" data-tag="icecream" style="background-image: url({% static 'day27/images/icecream1.jpg' %});"></div>
+            <p class="gallery__thumb--title">Large Strawberry Sunday</p>
+            <p class="gallery__thumb--price-details">$<span class="price">8.99</span></p>
+            <button class="btn-add-cart">Add To Cart</button>
+        </div>
+        <div class="gallery__thumb--container">
+            <div class="gallery__thumb" role="img" aria-label="Milkshake" title="Milkshake" data-tag="milkshake" style="background-image: url({% static 'day27/images/milkshake4.jpg' %});"></div>
+            <p class="gallery__thumb--title">Vegan Chocolate Milkshake</p>
+            <p class="gallery__thumb--price-details">$<span class="price">9.99</span></p>
+            <button class="btn-add-cart">Add To Cart</button>
+        </div>
+        <div class="gallery__thumb--container">
+            <div class="gallery__thumb" role="img" aria-label="Popsicle" title="Popsicle" data-tag="popsicle" style="background-image: url({% static 'day27/images/popsicle6.jpg' %});"></div>
+            <p class="gallery__thumb--title">Tropical Fruit Popsicle</p>
+            <p class="gallery__thumb--price-details">$<span class="price">4.99</span></p>
+            <button class="btn-add-cart">Add To Cart</button>
+        </div>
+    </div>
+</div>
+<div class="cart__container">
+    <div class="cart__header">
+        <button class="cart__close">X</button>
+        <h1>Shopping Cart</h1>
+    </div>
+    <div class="cart__list">
+    </div>
+    <div class="total__container">
+        <h1>Total</h1>
+        <p>$<span id="total">0.00</span></p>
+    </div>
+</div>
+
 <script src="{% static '' %}{{ app_name }}/script.js"></script>
 </body>
 </html>
