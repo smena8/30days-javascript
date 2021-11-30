@@ -8,6 +8,49 @@
     <link rel="stylesheet" type="text/css" href="{% static '' %}{{ app_name }}/style.css" media="all">
 </head>
 <body>
+<header>
+    <h1>Ice Cream History</h1>
+</header>
+<div class="timeline__container">
+    <div class="vertical-line"></div>
+    <div class="timeline__block hidden">
+        <div class="timeline__img" style="background-image: url('{% static 'day29/images/pink_scoop.png' %}')">
+        </div>
+        <div class="timeline__text">
+            <h2>200 AD</h2>
+            <p>Ancient Chinese records tell of frozen mixture of milk and rice that was consumed as a summer treat.</p>
+            <button type="button">READ MORE</button>
+        </div>
+    </div>
+    <div class="timeline__block hidden">
+        <div class="timeline__img" style="background-image: url('{% static 'day29/images/vanilla_scoop.png' %}')">
+        </div>
+        <div class="timeline__text">
+            <h2>Late 13th century</h2>
+            <p>Marco Polo returns to Italy, carrying with him the tale and recipe for ice cream. Italy becomes fascinated with findings from Middle East and Asia and starts the age of Renaissance.</p>
+            <button type="button">READ MORE</button>
+        </div>
+    </div>
+    <div class="timeline__block hidden">
+        <div class="timeline__img" style="background-image: url('{% static 'day29/images/choc_scoop.png' %}')">
+        </div>
+        <div class="timeline__text">
+            <h2>1744</h2>
+            <p>Scottish colonists brought ice cream recipe to North America.</p>
+            <button type="button">READ MORE</button>
+        </div>
+    </div>
+    <div class="timeline__block hidden">
+        <div class="timeline__img" style="background-image: url('{% static 'day29/images/cookies_scoop.png' %}')">
+        </div>
+        <div class="timeline__text">
+            <h2>1904</h2>
+            <p>Tremendous ice cream demand at St. Louis. The World's Fair caused local ice cream sellers to make the world’s first ice cream cones. This early models were made by employing services of nearby waffle vendor.</p>
+            <button type="button">READ MORE</button>
+        </div>
+    </div>
+</div>
+
 <script src="{% static '' %}{{ app_name }}/script.js"></script>
 </body>
 </html>
