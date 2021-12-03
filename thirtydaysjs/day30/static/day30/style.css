@@ -1,4 +1,88 @@
 :root {
-    --pink: #ee8691;
-    --green: #83ad6b;
+    --main:  #682a8d;
+    --light: #a07eba;
+    --black: #00000;
+}
+
+*, *:after, *:before {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url('https://images.unsplash.com/photo-1498116069452-debf99cb30f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+    color: var(--light);
+    font-family: sans-serif;
+    display: flex;
+    justify-content: start;
+    min-height: 100vh;
+}
+
+.main__container {
+    padding: 5em;
+}
+
+.center {
+	width: 100%;
+	position: relative;
+}
+
+.line {
+    background-color: transparent;
+    min-height: 5px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.topic,.question {
+    height: 75px;
+    padding: 1em 1em 1em 0em;
+}
+
+.choices {
+	display: flex;
+	justify-content: space-around;
+	min-width: 100vh;
+}
+
+.choice {
+    position: relative;
+    overflow: hidden;
+}
+
+button {
+    background-color: var(--main);
+    border: 2px solid var(--light);
+    border-radius: 10px;
+    color: var(--light);
+    cursor: pointer;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 5px 0;
+    padding: 1em;
+    width: 15em;
+    display: inline-block;
+
+}
+
+button:hover, button:focus, button:active, .matched, .selected {
+    background-color: var(--light);
+    border: 2px solid var(--main);
+    color: var(--main);
+}
+
+.matched {
+    cursor: not-allowed;
+}
+
+.choice > input {
+	position: absolute;
+	top: -5000px;
+	left: -5000px;
+	z-index: -1;
 }
